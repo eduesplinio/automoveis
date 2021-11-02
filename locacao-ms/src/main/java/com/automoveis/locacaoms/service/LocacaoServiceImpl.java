@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.automoveis.clienteHTTP.LocacaoClienteFeignClient;
+import com.automoveis.clienteHTTP.LocacaoVeiculoFeignClient;
+import com.automoveis.compartilhado.Cliente;
 import com.automoveis.compartilhado.LocacaoDto;
 import com.automoveis.locacaoms.model.Locacao;
 import com.automoveis.locacaoms.repository.LocacaoRepositorio;
@@ -17,6 +20,8 @@ public class LocacaoServiceImpl implements LocacaoService {
     @Autowired
     private LocacaoRepositorio repo;
 
+    @Autowired
+    private LocacaoClienteFeignClient clienteMsClient;
     @Override
     public LocacaoDto criarLocacao(LocacaoDto Locacao) {
         return salvarLocacao(Locacao);
@@ -36,7 +41,10 @@ public class LocacaoServiceImpl implements LocacaoService {
         Optional<Locacao> Locacao = repo.findById(id);
 
        if(Locacao.isPresent()) {
-           return Optional.of(new ModelMapper().map(Locacao.get(), LocacaoDto.class));
+           LocacaoDto dto = new ModelMapper().map(Locacao.get(), LocacaoDto.class);
+           dto.setIdCliente(clienteMsClient.obterCliente(id));
+           return Optional.of(dto);
+
        }
 
        return Optional.empty();

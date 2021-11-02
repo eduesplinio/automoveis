@@ -11,7 +11,6 @@ public class Locacao {
     private String idCliente;
     private String numDiasLocacao;
 
-    //#region Getters and setters
     public String getId() {
         return id;
     }
@@ -36,6 +35,5 @@ public class Locacao {
     public void setNumDiasLocacao(String numDiasLocacao) {
         this.numDiasLocacao = numDiasLocacao;
     }
-    //#endregion
 
 }

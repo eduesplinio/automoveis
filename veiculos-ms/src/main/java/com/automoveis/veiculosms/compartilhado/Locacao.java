@@ -1,20 +1,12 @@
-package com.automoveis.locacaoms.view.model;
+package com.automoveis.veiculosms.compartilhado;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-
-import com.automoveis.compartilhado.Cliente;
-import com.automoveis.compartilhado.Veiculo;
-
-public class LocacaoModeloInclusao {
-
+public class Locacao {
     private String id;
     private String idVeiculo;
     private String idCliente;
-    @NotBlank(message = "O número de dias deve possuir caracteres não brancos.")
-    @NotEmpty(message = "O número de dias da locação deve ser preenchido.")
     private String numDiasLocacao;
-    
+
+    //#region Getters and setters
     public String getId() {
         return id;
     }
@@ -39,7 +31,6 @@ public class LocacaoModeloInclusao {
     public void setNumDiasLocacao(String numDiasLocacao) {
         this.numDiasLocacao = numDiasLocacao;
     }
-   
-
-
+    //#endregion
+    
 }

@@ -2,41 +2,35 @@ package com.automoveis.clientesms.compartilhado;
 
 public class Locacao {
     private String id;
-    private String marca;
-    private String modelo;
-    private double numPassageiros;
+    private String idVeiculo;
+    private String idCliente;
+    private String numDiasLocacao;
 
-    //#region Getters and Setters
+    //#region Getters and setters
     public String getId() {
         return id;
     }
     public void setId(String id) {
         this.id = id;
     }
-    public String getMarca() {
-        return marca;
+    public String getIdVeiculo() {
+        return idVeiculo;
     }
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setIdVeiculo(String idVeiculo) {
+        this.idVeiculo = idVeiculo;
     }
-    public String getModelo() {
-        return modelo;
+    public String getIdCliente() {
+        return idCliente;
     }
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setIdCliente(String idCliente) {
+        this.idCliente = idCliente;
     }
-    public double getNumPassageiros() {
-        return numPassageiros;
+    public String getNumDiasLocacao() {
+        return numDiasLocacao;
     }
-    public void setNumPassageiros(double numPassageiros) {
-        this.numPassageiros = numPassageiros;
+    public void setNumDiasLocacao(String numDiasLocacao) {
+        this.numDiasLocacao = numDiasLocacao;
     }
-    public double getValor() {
-        return valor;
-    }
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-    private double valor;
     //#endregion
+    
 }

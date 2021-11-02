@@ -1,12 +1,14 @@
 package com.automoveis.locacaoms.view.model;
 
+import com.automoveis.compartilhado.Cliente;
+import com.automoveis.compartilhado.Veiculo;
+
 public class LocacaoModeloResponse {
     private String id;
     private String idVeiculo;
     private String idCliente;
     private String numDiasLocacao;
-
-    //#region Getters and setters
+    
     public String getId() {
         return id;
     }
@@ -31,6 +33,5 @@ public class LocacaoModeloResponse {
     public void setNumDiasLocacao(String numDiasLocacao) {
         this.numDiasLocacao = numDiasLocacao;
     }
-    //#endregion
-    
+
 }

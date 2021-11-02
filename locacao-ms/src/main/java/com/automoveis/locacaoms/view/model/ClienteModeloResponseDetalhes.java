@@ -1,8 +1,8 @@
-package com.automoveis.clientesms.view.model;
+package com.automoveis.locacaoms.view.model;
 
 import java.util.List;
 
-import com.automoveis.clientesms.compartilhado.Locacao;
+import com.automoveis.compartilhado.Cliente;
 
 public class ClienteModeloResponseDetalhes {
     private String id;
@@ -10,15 +10,15 @@ public class ClienteModeloResponseDetalhes {
     private String cpf;
     private String cnh;
     private String dataNascimento;
-    private List<Locacao> locacao;
+    private List<Cliente> cliente;
  
- public List<Locacao> getlocacao() {
-        return locacao;
+ public List<Cliente> getlocacao() {
+        return cliente;
         
 //#region Get and Setters
     }
-public void setlocacao(List<Locacao> locacao) {
-    this.locacao = locacao;
+public void setlocacao(List<Cliente> cliente) {
+    this.cliente = cliente;
 }
  public String getId() {
      return id;

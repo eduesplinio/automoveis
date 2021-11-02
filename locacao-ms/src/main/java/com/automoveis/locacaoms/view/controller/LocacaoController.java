@@ -24,7 +24,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/api/locacao")
 public class LocacaoController {
@@ -42,6 +41,7 @@ public class LocacaoController {
         LocacaoDto dto = mapper.map(Locacao, LocacaoDto.class);
         dto = service.criarLocacao(dto);
         return new ResponseEntity<>(mapper.map(dto, LocacaoModeloResponse.class), HttpStatus.CREATED);
+        
     }
     
     @GetMapping
